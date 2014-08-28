@@ -6,13 +6,22 @@
 			color: #FF0000;
 			text-align:center;
 		}
+		#canvas {
+			border: none;
+		}
 		</style>
-	</head>
-	<body>
-		<p id="ptag">P tag not modified</p>
-		<canvas width="640" height="480" id="canvas"></canvas>
 		<script type="text/javascript" src="dist/glMatrix-0.9.5.min.js"></script>
 		<script type="text/javascript" src="dist/webgl-debug.js"></script>
-		<script type="text/javascript" src="dist/coffeewebgl01.js"></script>
+		<script type="text/javascript" src="dist/coffeewebgl02.js"></script>
+		<script type="text/javascript">
+			function initApp() {
+				app = new window.canvasRenderer();
+				app.start();
+			}
+		</script>
+	</head>
+	<body onload="initApp()">
+		<p id="ptag">P tag not modified</p>
+		<canvas width="500" height="500" id="canvas"></canvas>
 	</body>
 </html>
